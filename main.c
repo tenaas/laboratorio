@@ -1,17 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int produto(int a, int b){
-    int result;
-    result = a*b;
-    return result;
-}
 int main()
 {
-    int n1, n2, resultado;
+
+    int a, b, c;
+    int resultado;
+
     printf("Informe dois numeros:\n");
-    scanf("%d %d", &n1, &n2);
-    resultado =  produto(n1, n2);
-    printf(" O produto foi %d\n", resultado);
+    scanf("%d %d", &a, &b);
+
+    resultado = somaValores(a, b);
+
+    printf("Valor de C eh %d\n", resultado);
+
     return 0;
+}
+
+int somaValores(int a, int b){
+    int *p, *q, c;
+    p = &a;
+    q = &b;
+    c = *p + *q;
+    return c;
 }
