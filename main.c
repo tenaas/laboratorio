@@ -3,25 +3,24 @@
 
 int main()
 {
-    int a, b;
+
+    int a, b, c;
+    int resultado;
 
     printf("Informe dois numeros:\n");
     scanf("%d %d", &a, &b);
 
-    printf("\n\nAntes da troca %d %d\n\n", a, b);
-    trocarVariavel(a, b);
+    resultado = somaValores(a, b);
+
+    printf("Valor de C eh %d\n", resultado);
 
     return 0;
 }
 
-void trocarVariavel(int a, int b){
-    int aux, *p, *q;
+int somaValores(int a, int b){
+    int *p, *q, c;
     p = &a;
     q = &b;
-    aux = *p;
-    a = *q;
-    b = aux;
-
-    printf("\n\nDepois da troca\n\n %d %d", a, b);
-
+    c = *p + *q;
+    return c;
 }
